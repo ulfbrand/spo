@@ -1,0 +1,4 @@
+/home/osmi/itmo/spo/spo3/task-1-parsing-src/CMakeFiles/GenerateParser.dir
+/home/osmi/itmo/spo/spo3/task-1-parsing-src/CMakeFiles/main.dir
+/home/osmi/itmo/spo/spo3/task-1-parsing-src/CMakeFiles/edit_cache.dir
+/home/osmi/itmo/spo/spo3/task-1-parsing-src/CMakeFiles/rebuild_cache.dir

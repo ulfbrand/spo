@@ -1,0 +1,326 @@
+digraph CFG {
+graph [splines=true];
+n_30[label="START"]
+n_30 -> n_32;
+n_32[label="EXPRESSION"]
+subgraph cluster_32 {
+n_32 -> ot_0[label=ot];
+ot_0[label="call"]
+ot_0 -> ot_1[label=child0,color=orange];
+ot_1[label="put_str"]
+ot_0 -> ot_2[label=child1,color=orange];
+ot_2[label="load_const"]
+ot_2 -> ot_3[label=next];
+ot_3[label="load_const"]
+ot_3 -> ot_4[label=child0,color=orange];
+ot_4[label="3"]
+ot_2 -> ot_5[label=child0,color=orange];
+ot_5[label="\">: \""]
+}
+n_32 -> n_33;
+n_33[label="EXPRESSION"]
+subgraph cluster_33 {
+n_33 -> ot_6[label=ot];
+ot_6[label="store"]
+ot_6 -> ot_7[label=child0,color=orange];
+ot_7[label="a"]
+ot_6 -> ot_8[label=child1,color=orange];
+ot_8[label="call"]
+ot_8 -> ot_9[label=child0,color=orange];
+ot_9[label="get_int"]
+}
+n_33 -> n_34;
+n_34[label="WHILE"]
+subgraph cluster_34 {
+n_34 -> ot_10[label=ot];
+ot_10[label="load_const"]
+ot_10 -> ot_11[label=child0,color=orange];
+ot_11[label="true"]
+}
+n_34 -> n_36[label=True, color=green];
+n_34 -> n_35[label=False, color=red];
+n_36[label="EXPRESSION"]
+subgraph cluster_36 {
+n_36 -> ot_12[label=ot];
+ot_12[label="call"]
+ot_12 -> ot_13[label=child0,color=orange];
+ot_13[label="put_str"]
+ot_12 -> ot_14[label=child1,color=orange];
+ot_14[label="load_const"]
+ot_14 -> ot_15[label=next];
+ot_15[label="load_const"]
+ot_15 -> ot_16[label=child0,color=orange];
+ot_16[label="3"]
+ot_14 -> ot_17[label=child0,color=orange];
+ot_17[label="\">: \""]
+}
+n_36 -> n_37;
+n_37[label="EXPRESSION"]
+subgraph cluster_37 {
+n_37 -> ot_18[label=ot];
+ot_18[label="store"]
+ot_18 -> ot_19[label=child0,color=orange];
+ot_19[label="op"]
+ot_18 -> ot_20[label=child1,color=orange];
+ot_20[label="call"]
+ot_20 -> ot_21[label=child0,color=orange];
+ot_21[label="get_char"]
+}
+n_37 -> n_38;
+n_38[label="EXPRESSION"]
+subgraph cluster_38 {
+n_38 -> ot_22[label=ot];
+ot_22[label="call"]
+ot_22 -> ot_23[label=child0,color=orange];
+ot_23[label="get_char"]
+}
+n_38 -> n_39;
+n_39[label="EXPRESSION"]
+subgraph cluster_39 {
+n_39 -> ot_24[label=ot];
+ot_24[label="call"]
+ot_24 -> ot_25[label=child0,color=orange];
+ot_25[label="get_char"]
+}
+n_39 -> n_41;
+n_41[label="IF"]
+subgraph cluster_41 {
+n_41 -> ot_26[label=ot];
+ot_26[label="=="]
+ot_26 -> ot_27[label=child0,color=orange];
+ot_27[label="load_data"]
+ot_27 -> ot_28[label=child0,color=orange];
+ot_28[label="op"]
+ot_26 -> ot_29[label=child1,color=orange];
+ot_29[label="load_const"]
+ot_29 -> ot_30[label=child0,color=orange];
+ot_30[label="'q'"]
+}
+n_41 -> n_35[label=True, color=green];
+n_41 -> n_40[label=False, color=red];
+n_35[label="after_while"]
+n_35 -> n_64;
+n_64[label="BLOCK_END"]
+n_64 -> n_31;
+n_31[label="END"]
+n_40[label="after_if"]
+n_40 -> n_42;
+n_42[label="EXPRESSION"]
+subgraph cluster_42 {
+n_42 -> ot_31[label=ot];
+ot_31[label="call"]
+ot_31 -> ot_32[label=child0,color=orange];
+ot_32[label="put_str"]
+ot_31 -> ot_33[label=child1,color=orange];
+ot_33[label="load_const"]
+ot_33 -> ot_34[label=next];
+ot_34[label="load_const"]
+ot_34 -> ot_35[label=child0,color=orange];
+ot_35[label="3"]
+ot_33 -> ot_36[label=child0,color=orange];
+ot_36[label="\">: \""]
+}
+n_42 -> n_43;
+n_43[label="EXPRESSION"]
+subgraph cluster_43 {
+n_43 -> ot_37[label=ot];
+ot_37[label="store"]
+ot_37 -> ot_38[label=child0,color=orange];
+ot_38[label="b"]
+ot_37 -> ot_39[label=child1,color=orange];
+ot_39[label="call"]
+ot_39 -> ot_40[label=child0,color=orange];
+ot_40[label="get_int"]
+}
+n_43 -> n_44;
+n_44[label="EXPRESSION"]
+subgraph cluster_44 {
+n_44 -> ot_41[label=ot];
+ot_41[label="call"]
+ot_41 -> ot_42[label=child0,color=orange];
+ot_42[label="put_str"]
+ot_41 -> ot_43[label=child1,color=orange];
+ot_43[label="load_const"]
+ot_43 -> ot_44[label=next];
+ot_44[label="load_const"]
+ot_44 -> ot_45[label=child0,color=orange];
+ot_45[label="3"]
+ot_43 -> ot_46[label=child0,color=orange];
+ot_46[label="\"= \""]
+}
+n_44 -> n_46;
+n_46[label="IF"]
+subgraph cluster_46 {
+n_46 -> ot_47[label=ot];
+ot_47[label="=="]
+ot_47 -> ot_48[label=child0,color=orange];
+ot_48[label="load_data"]
+ot_48 -> ot_49[label=child0,color=orange];
+ot_49[label="op"]
+ot_47 -> ot_50[label=child1,color=orange];
+ot_50[label="load_const"]
+ot_50 -> ot_51[label=child0,color=orange];
+ot_51[label="'+'"]
+}
+n_46 -> n_59[label=True, color=green];
+n_46 -> n_48[label=False, color=red];
+n_59[label="EXPRESSION"]
+subgraph cluster_59 {
+n_59 -> ot_52[label=ot];
+ot_52[label="store"]
+ot_52 -> ot_53[label=child0,color=orange];
+ot_53[label="a"]
+ot_52 -> ot_54[label=child1,color=orange];
+ot_54[label="+"]
+ot_54 -> ot_55[label=child0,color=orange];
+ot_55[label="load_data"]
+ot_55 -> ot_56[label=child0,color=orange];
+ot_56[label="a"]
+ot_54 -> ot_57[label=child1,color=orange];
+ot_57[label="load_data"]
+ot_57 -> ot_58[label=child0,color=orange];
+ot_58[label="b"]
+}
+n_59 -> n_60;
+n_60[label="BLOCK_END"]
+n_60 -> n_45;
+n_45[label="after_if"]
+n_45 -> n_61;
+n_61[label="EXPRESSION"]
+subgraph cluster_61 {
+n_61 -> ot_59[label=ot];
+ot_59[label="call"]
+ot_59 -> ot_60[label=child0,color=orange];
+ot_60[label="put_int"]
+ot_59 -> ot_61[label=child1,color=orange];
+ot_61[label="load_data"]
+ot_61 -> ot_62[label=child0,color=orange];
+ot_62[label="a"]
+}
+n_61 -> n_62;
+n_62[label="EXPRESSION"]
+subgraph cluster_62 {
+n_62 -> ot_63[label=ot];
+ot_63[label="call"]
+ot_63 -> ot_64[label=child0,color=orange];
+ot_64[label="put_char"]
+ot_63 -> ot_65[label=child1,color=orange];
+ot_65[label="load_const"]
+ot_65 -> ot_66[label=child0,color=orange];
+ot_66[label="10"]
+}
+n_62 -> n_63;
+n_63[label="BLOCK_END"]
+n_63 -> n_34;
+n_48[label="IF"]
+subgraph cluster_48 {
+n_48 -> ot_67[label=ot];
+ot_67[label="=="]
+ot_67 -> ot_68[label=child0,color=orange];
+ot_68[label="load_data"]
+ot_68 -> ot_69[label=child0,color=orange];
+ot_69[label="op"]
+ot_67 -> ot_70[label=child1,color=orange];
+ot_70[label="load_const"]
+ot_70 -> ot_71[label=child0,color=orange];
+ot_71[label="'-'"]
+}
+n_48 -> n_57[label=True, color=green];
+n_48 -> n_50[label=False, color=red];
+n_57[label="EXPRESSION"]
+subgraph cluster_57 {
+n_57 -> ot_72[label=ot];
+ot_72[label="store"]
+ot_72 -> ot_73[label=child0,color=orange];
+ot_73[label="a"]
+ot_72 -> ot_74[label=child1,color=orange];
+ot_74[label="-"]
+ot_74 -> ot_75[label=child0,color=orange];
+ot_75[label="load_data"]
+ot_75 -> ot_76[label=child0,color=orange];
+ot_76[label="a"]
+ot_74 -> ot_77[label=child1,color=orange];
+ot_77[label="load_data"]
+ot_77 -> ot_78[label=child0,color=orange];
+ot_78[label="b"]
+}
+n_57 -> n_58;
+n_58[label="BLOCK_END"]
+n_58 -> n_47;
+n_47[label="after_if"]
+n_47 -> n_45;
+n_50[label="IF"]
+subgraph cluster_50 {
+n_50 -> ot_79[label=ot];
+ot_79[label="=="]
+ot_79 -> ot_80[label=child0,color=orange];
+ot_80[label="load_data"]
+ot_80 -> ot_81[label=child0,color=orange];
+ot_81[label="op"]
+ot_79 -> ot_82[label=child1,color=orange];
+ot_82[label="load_const"]
+ot_82 -> ot_83[label=child0,color=orange];
+ot_83[label="'*'"]
+}
+n_50 -> n_55[label=True, color=green];
+n_50 -> n_52[label=False, color=red];
+n_55[label="EXPRESSION"]
+subgraph cluster_55 {
+n_55 -> ot_84[label=ot];
+ot_84[label="store"]
+ot_84 -> ot_85[label=child0,color=orange];
+ot_85[label="a"]
+ot_84 -> ot_86[label=child1,color=orange];
+ot_86[label="*"]
+ot_86 -> ot_87[label=child0,color=orange];
+ot_87[label="load_data"]
+ot_87 -> ot_88[label=child0,color=orange];
+ot_88[label="a"]
+ot_86 -> ot_89[label=child1,color=orange];
+ot_89[label="load_data"]
+ot_89 -> ot_90[label=child0,color=orange];
+ot_90[label="b"]
+}
+n_55 -> n_56;
+n_56[label="BLOCK_END"]
+n_56 -> n_49;
+n_49[label="after_if"]
+n_49 -> n_47;
+n_52[label="IF"]
+subgraph cluster_52 {
+n_52 -> ot_91[label=ot];
+ot_91[label="=="]
+ot_91 -> ot_92[label=child0,color=orange];
+ot_92[label="load_data"]
+ot_92 -> ot_93[label=child0,color=orange];
+ot_93[label="op"]
+ot_91 -> ot_94[label=child1,color=orange];
+ot_94[label="load_const"]
+ot_94 -> ot_95[label=child0,color=orange];
+ot_95[label="'/'"]
+}
+n_52 -> n_53[label=True, color=green];
+n_52 -> n_51[label=False, color=red];
+n_53[label="EXPRESSION"]
+subgraph cluster_53 {
+n_53 -> ot_96[label=ot];
+ot_96[label="store"]
+ot_96 -> ot_97[label=child0,color=orange];
+ot_97[label="a"]
+ot_96 -> ot_98[label=child1,color=orange];
+ot_98[label="/"]
+ot_98 -> ot_99[label=child0,color=orange];
+ot_99[label="load_data"]
+ot_99 -> ot_100[label=child0,color=orange];
+ot_100[label="a"]
+ot_98 -> ot_101[label=child1,color=orange];
+ot_101[label="load_data"]
+ot_101 -> ot_102[label=child0,color=orange];
+ot_102[label="b"]
+}
+n_53 -> n_54;
+n_54[label="BLOCK_END"]
+n_54 -> n_51;
+n_51[label="after_if"]
+n_51 -> n_49;
+}

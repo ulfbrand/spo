@@ -1,0 +1,39 @@
+ fun(int a) {
+
+}
+bool [,,][,][] asd(int argc, char[]argv) {
+    int a = 4, c, b = a + 3;
+    x= a+b * 2 - (5 + 4) / 2;
+    my_type a;
+    string [] asd;
+    string [,,,] asd;
+
+
+    bool x = true + 5;
+    arr [5] = 5;
+
+    a = b += 5;
+
+    {
+        x = 1;
+
+    }
+    x = arr [5];
+
+    while (x == 14) {
+        b -= 3;
+    }
+
+    if (a) {
+        asdasd;
+    } else {
+        cxvcxv;
+        break;
+    }
+
+    do {
+        asd;
+        asd;
+        asd;
+    } while (tr);
+}

@@ -1,0 +1,59 @@
+void put_char(char c);
+char get_char();
+
+put_str(str, size) {
+    i = 0;
+    while (i < size) {
+        put_char(str[i]);
+        i +=1;
+    }
+}
+
+put_int(a) {
+    if (a > 9) put_int(a / 10);
+    if (a != 0) put_char((a % 10) + '0');
+}
+
+get_int() {
+    a = 0;
+    c = get_char();
+
+    while (c != 13) {
+        a = 10*a + (c - '0');
+        c = get_char();
+    }
+    get_char();
+    a;
+}
+
+calc() {
+    put_str(">: ", 3);
+    a = get_int();
+
+    while(true) {
+        put_str(">: ", 3);
+        op = get_char();
+        get_char();
+        get_char();
+        
+        if (op == 'q') break;
+        put_str(">: ", 3);
+        b = get_int();
+
+        put_str("= ", 3);
+         
+        if (op == '+') {
+            a = a + b;
+        } else if (op == '-') {
+            a = a - b;
+        } else if (op == '*') {
+            a = a * b;
+        } else if (op == '/') {
+            a = a / b;
+        }
+        put_int(a);
+        put_char(10);
+        
+
+    }
+}

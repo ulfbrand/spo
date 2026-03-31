@@ -1,0 +1,26 @@
+digraph AST {
+graph [splines=true];
+n0[label="SOURCE"]
+n0 -> n1;
+n1[label="FUNC_DEF"]
+n1 -> n2;
+n2[label="UNTYPE_FUNC_SIG"]
+n2 -> n3;
+n3[label="main"]
+n2 -> n4;
+n4[label="ARG_DEF"]
+n1 -> n5;
+n5[label="ROOT_DEF"]
+n5 -> n6;
+n6[label="BLOCK_DEF"]
+n6 -> n7;
+n7[label="EXPRESSION"]
+n7 -> n8;
+n8[label="ACCESS"]
+n8 -> n9;
+n9[label="NAME"]
+n9 -> n10;
+n10[label="calc"]
+n8 -> n11;
+n11[label="ARG_CALL"]
+}

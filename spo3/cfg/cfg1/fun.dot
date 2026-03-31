@@ -1,0 +1,8 @@
+digraph CFG {
+graph [splines=true];
+n_0[label="START"]
+n_0 -> n_2;
+n_2[label="BLOCK_END"]
+n_2 -> n_1;
+n_1[label="END"]
+}

@@ -1,0 +1,84 @@
+digraph CFG {
+graph [splines=true];
+n_9[label="START"]
+n_9 -> n_12;
+n_12[label="IF"]
+subgraph cluster_12 {
+n_12 -> ot_0[label=ot];
+ot_0[label=">"]
+ot_0 -> ot_1[label=child0,color=orange];
+ot_1[label="load_data"]
+ot_1 -> ot_2[label=child0,color=orange];
+ot_2[label="a"]
+ot_0 -> ot_3[label=child1,color=orange];
+ot_3[label="load_const"]
+ot_3 -> ot_4[label=child0,color=orange];
+ot_4[label="9"]
+}
+n_12 -> n_13[label=True, color=green];
+n_12 -> n_11[label=False, color=red];
+n_13[label="EXPRESSION"]
+subgraph cluster_13 {
+n_13 -> ot_5[label=ot];
+ot_5[label="call"]
+ot_5 -> ot_6[label=child0,color=orange];
+ot_6[label="put_int"]
+ot_5 -> ot_7[label=child1,color=orange];
+ot_7[label="/"]
+ot_7 -> ot_8[label=child0,color=orange];
+ot_8[label="load_data"]
+ot_8 -> ot_9[label=child0,color=orange];
+ot_9[label="a"]
+ot_7 -> ot_10[label=child1,color=orange];
+ot_10[label="load_const"]
+ot_10 -> ot_11[label=child0,color=orange];
+ot_11[label="10"]
+}
+n_13 -> n_11;
+n_11[label="after_if"]
+n_11 -> n_15;
+n_15[label="IF"]
+subgraph cluster_15 {
+n_15 -> ot_12[label=ot];
+ot_12[label="!="]
+ot_12 -> ot_13[label=child0,color=orange];
+ot_13[label="load_data"]
+ot_13 -> ot_14[label=child0,color=orange];
+ot_14[label="a"]
+ot_12 -> ot_15[label=child1,color=orange];
+ot_15[label="load_const"]
+ot_15 -> ot_16[label=child0,color=orange];
+ot_16[label="0"]
+}
+n_15 -> n_16[label=True, color=green];
+n_15 -> n_14[label=False, color=red];
+n_16[label="EXPRESSION"]
+subgraph cluster_16 {
+n_16 -> ot_17[label=ot];
+ot_17[label="call"]
+ot_17 -> ot_18[label=child0,color=orange];
+ot_18[label="put_char"]
+ot_17 -> ot_19[label=child1,color=orange];
+ot_19[label="+"]
+ot_19 -> ot_20[label=child0,color=orange];
+ot_20[label="%"]
+ot_20 -> ot_21[label=child0,color=orange];
+ot_21[label="load_data"]
+ot_21 -> ot_22[label=child0,color=orange];
+ot_22[label="a"]
+ot_20 -> ot_23[label=child1,color=orange];
+ot_23[label="load_const"]
+ot_23 -> ot_24[label=child0,color=orange];
+ot_24[label="10"]
+ot_19 -> ot_25[label=child1,color=orange];
+ot_25[label="load_const"]
+ot_25 -> ot_26[label=child0,color=orange];
+ot_26[label="'0'"]
+}
+n_16 -> n_14;
+n_14[label="after_if"]
+n_14 -> n_17;
+n_17[label="BLOCK_END"]
+n_17 -> n_10;
+n_10[label="END"]
+}
