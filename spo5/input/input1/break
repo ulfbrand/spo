@@ -1,0 +1,29 @@
+int breakk() {
+    while(true) {
+        int a = b, b;
+        c += d;
+
+        if (a == b) {
+            123;
+            c -= 4;
+            break;
+        } else {
+            if (true) {
+                c = 5;
+                break;
+            } else {
+                b = 4;
+            }
+            b +=4;
+        }
+
+        x - y;
+        x = y;
+
+    }
+
+    do {
+        a = 5;
+    } while(true);
+
+}

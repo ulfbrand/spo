@@ -1,0 +1,216 @@
+digraph AST {
+graph [splines=true];
+n0[label="SOURCE"]
+n0 -> n1;
+n1[label="FUNC_DEF"]
+n1 -> n2;
+n2[label="FUNC_SIG"]
+n2 -> n3;
+n3[label="TYPE"]
+n3 -> n4;
+n4[label="int"]
+n2 -> n5;
+n5[label="breakk"]
+n2 -> n6;
+n6[label="ARG_DEF"]
+n1 -> n7;
+n7[label="ROOT_DEF"]
+n7 -> n8;
+n8[label="BLOCK_DEF"]
+n8 -> n9;
+n9[label="WHILE_DEF"]
+n9 -> n10;
+n10[label="COND_DEF"]
+n10 -> n11;
+n11[label="EXPRESSION"]
+n11 -> n12;
+n12[label="true"]
+n9 -> n13;
+n13[label="BLOCK_DEF"]
+n13 -> n14;
+n14[label="VAR_DEF"]
+n14 -> n15;
+n15[label="TYPE"]
+n15 -> n16;
+n16[label="int"]
+n14 -> n17;
+n17[label="DECLARE"]
+n17 -> n18;
+n18[label="a"]
+n17 -> n19;
+n19[label="EXPRESSION"]
+n19 -> n20;
+n20[label="ASSIGNMENT"]
+n20 -> n21;
+n21[label="="]
+n20 -> n22;
+n22[label="NAME"]
+n22 -> n23;
+n23[label="a"]
+n20 -> n24;
+n24[label="EXPRESSION"]
+n24 -> n25;
+n25[label="NAME"]
+n25 -> n26;
+n26[label="b"]
+n14 -> n27;
+n27[label="DECLARE"]
+n27 -> n28;
+n28[label="b"]
+n13 -> n29;
+n29[label="EXPRESSION"]
+n29 -> n30;
+n30[label="ASSIGNMENT"]
+n30 -> n31;
+n31[label="+="]
+n30 -> n32;
+n32[label="NAME"]
+n32 -> n33;
+n33[label="c"]
+n30 -> n34;
+n34[label="NAME"]
+n34 -> n35;
+n35[label="d"]
+n13 -> n36;
+n36[label="IF_DEF"]
+n36 -> n37;
+n37[label="COND_DEF"]
+n37 -> n38;
+n38[label="EXPRESSION"]
+n38 -> n39;
+n39[label="=="]
+n39 -> n40;
+n40[label="NAME"]
+n40 -> n41;
+n41[label="a"]
+n39 -> n42;
+n42[label="NAME"]
+n42 -> n43;
+n43[label="b"]
+n36 -> n44;
+n44[label="BLOCK_DEF"]
+n44 -> n45;
+n45[label="EXPRESSION"]
+n45 -> n46;
+n46[label="123"]
+n44 -> n47;
+n47[label="EXPRESSION"]
+n47 -> n48;
+n48[label="ASSIGNMENT"]
+n48 -> n49;
+n49[label="-="]
+n48 -> n50;
+n50[label="NAME"]
+n50 -> n51;
+n51[label="c"]
+n48 -> n52;
+n52[label="4"]
+n44 -> n53;
+n53[label="break"]
+n36 -> n54;
+n54[label="ELSE_DEF"]
+n54 -> n55;
+n55[label="BLOCK_DEF"]
+n55 -> n56;
+n56[label="IF_DEF"]
+n56 -> n57;
+n57[label="COND_DEF"]
+n57 -> n58;
+n58[label="EXPRESSION"]
+n58 -> n59;
+n59[label="true"]
+n56 -> n60;
+n60[label="BLOCK_DEF"]
+n60 -> n61;
+n61[label="EXPRESSION"]
+n61 -> n62;
+n62[label="ASSIGNMENT"]
+n62 -> n63;
+n63[label="="]
+n62 -> n64;
+n64[label="NAME"]
+n64 -> n65;
+n65[label="c"]
+n62 -> n66;
+n66[label="5"]
+n60 -> n67;
+n67[label="break"]
+n56 -> n68;
+n68[label="ELSE_DEF"]
+n68 -> n69;
+n69[label="BLOCK_DEF"]
+n69 -> n70;
+n70[label="EXPRESSION"]
+n70 -> n71;
+n71[label="ASSIGNMENT"]
+n71 -> n72;
+n72[label="="]
+n71 -> n73;
+n73[label="NAME"]
+n73 -> n74;
+n74[label="b"]
+n71 -> n75;
+n75[label="4"]
+n55 -> n76;
+n76[label="EXPRESSION"]
+n76 -> n77;
+n77[label="ASSIGNMENT"]
+n77 -> n78;
+n78[label="+="]
+n77 -> n79;
+n79[label="NAME"]
+n79 -> n80;
+n80[label="b"]
+n77 -> n81;
+n81[label="4"]
+n13 -> n82;
+n82[label="EXPRESSION"]
+n82 -> n83;
+n83[label="-"]
+n83 -> n84;
+n84[label="NAME"]
+n84 -> n85;
+n85[label="x"]
+n83 -> n86;
+n86[label="NAME"]
+n86 -> n87;
+n87[label="y"]
+n13 -> n88;
+n88[label="EXPRESSION"]
+n88 -> n89;
+n89[label="ASSIGNMENT"]
+n89 -> n90;
+n90[label="="]
+n89 -> n91;
+n91[label="NAME"]
+n91 -> n92;
+n92[label="x"]
+n89 -> n93;
+n93[label="NAME"]
+n93 -> n94;
+n94[label="y"]
+n8 -> n95;
+n95[label="DO_DEF"]
+n95 -> n96;
+n96[label="DO_STH_DEF"]
+n96 -> n97;
+n97[label="BLOCK_DEF"]
+n97 -> n98;
+n98[label="EXPRESSION"]
+n98 -> n99;
+n99[label="ASSIGNMENT"]
+n99 -> n100;
+n100[label="="]
+n99 -> n101;
+n101[label="NAME"]
+n101 -> n102;
+n102[label="a"]
+n99 -> n103;
+n103[label="5"]
+n95 -> n104;
+n104[label="COND_DEF"]
+n104 -> n105;
+n105[label="EXPRESSION"]
+n105 -> n106;
+n106[label="true"]
+}

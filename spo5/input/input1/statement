@@ -1,0 +1,16 @@
+int statement() {
+    int a;
+    string asd = "asr";
+
+    if (a=2) b=c;
+    if (a=2) {
+        b=c;
+    } else c=4;
+
+     while (true) a+b;
+
+     do {
+     a+100;
+     } while (a<1000);
+
+}

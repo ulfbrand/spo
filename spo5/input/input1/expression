@@ -1,0 +1,15 @@
+int expr() {
+    a & b;
+    a >= b <= c;
+
+    not a;
+
+    ("literal in braces");
+
+    call (item1, item2);
+
+    indexer [0,1,2,3];
+
+    a;
+
+}

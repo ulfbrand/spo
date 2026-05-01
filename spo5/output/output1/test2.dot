@@ -1,0 +1,142 @@
+digraph AST {
+graph [splines=true];
+n0[label="SOURCE"]
+n0 -> n1;
+n1[label="FUNC_DEF"]
+n1 -> n2;
+n2[label="FUNC_SIG"]
+n2 -> n3;
+n3[label="TYPE"]
+n3 -> n4;
+n4[label="int"]
+n2 -> n5;
+n5[label="test2"]
+n2 -> n6;
+n6[label="ARG_DEF"]
+n1 -> n7;
+n7[label="ROOT_DEF"]
+n7 -> n8;
+n8[label="BLOCK_DEF"]
+n8 -> n9;
+n9[label="EXPRESSION"]
+n9 -> n10;
+n10[label="ASSIGNMENT"]
+n10 -> n11;
+n11[label="="]
+n10 -> n12;
+n12[label="ACCESS"]
+n12 -> n13;
+n13[label="NAME"]
+n13 -> n14;
+n14[label="a"]
+n12 -> n15;
+n15[label="INDEXER_DEF"]
+n15 -> n16;
+n16[label="EXPRESSION"]
+n16 -> n17;
+n17[label="5"]
+n15 -> n18;
+n18[label="EXPRESSION"]
+n18 -> n19;
+n19[label="7"]
+n10 -> n20;
+n20[label="6"]
+n8 -> n21;
+n21[label="EXPRESSION"]
+n21 -> n22;
+n22[label="ASSIGNMENT"]
+n22 -> n23;
+n23[label="="]
+n22 -> n24;
+n24[label="NAME"]
+n24 -> n25;
+n25[label="x"]
+n22 -> n26;
+n26[label="ACCESS"]
+n26 -> n27;
+n27[label="NAME"]
+n27 -> n28;
+n28[label="a"]
+n26 -> n29;
+n29[label="INDEXER_DEF"]
+n29 -> n30;
+n30[label="EXPRESSION"]
+n30 -> n31;
+n31[label="5"]
+n8 -> n32;
+n32[label="EXPRESSION"]
+n32 -> n33;
+n33[label="ASSIGNMENT"]
+n33 -> n34;
+n34[label="="]
+n33 -> n35;
+n35[label="NAME"]
+n35 -> n36;
+n36[label="y"]
+n33 -> n37;
+n37[label="ACCESS"]
+n37 -> n38;
+n38[label="NAME"]
+n38 -> n39;
+n39[label="a"]
+n37 -> n40;
+n40[label="ARG_CALL"]
+n8 -> n41;
+n41[label="EXPRESSION"]
+n41 -> n42;
+n42[label="ASSIGNMENT"]
+n42 -> n43;
+n43[label="+="]
+n42 -> n44;
+n44[label="ACCESS"]
+n44 -> n45;
+n45[label="NAME"]
+n45 -> n46;
+n46[label="a"]
+n44 -> n47;
+n47[label="INDEXER_DEF"]
+n47 -> n48;
+n48[label="EXPRESSION"]
+n48 -> n49;
+n49[label="3"]
+n47 -> n50;
+n50[label="EXPRESSION"]
+n50 -> n51;
+n51[label="4"]
+n47 -> n52;
+n52[label="EXPRESSION"]
+n52 -> n53;
+n53[label="5"]
+n42 -> n54;
+n54[label="1"]
+n8 -> n55;
+n55[label="EXPRESSION"]
+n55 -> n56;
+n56[label="ASSIGNMENT"]
+n56 -> n57;
+n57[label="="]
+n56 -> n58;
+n58[label="NAME"]
+n58 -> n59;
+n59[label="asd"]
+n56 -> n60;
+n60[label="ACCESS"]
+n60 -> n61;
+n61[label="NAME"]
+n61 -> n62;
+n62[label="fun"]
+n60 -> n63;
+n63[label="ARG_CALL"]
+n63 -> n64;
+n64[label="EXPRESSION"]
+n64 -> n65;
+n65[label="1"]
+n63 -> n66;
+n66[label="EXPRESSION"]
+n66 -> n67;
+n67[label="2"]
+n63 -> n68;
+n68[label="EXPRESSION"]
+n68 -> n69;
+n69[label="3"]
+}

@@ -1,0 +1,4 @@
+/mnt/c/Users/nmogi/Desktop/spo3/spo3/CMakeFiles/GenerateParser.dir
+/mnt/c/Users/nmogi/Desktop/spo3/spo3/CMakeFiles/main.dir
+/mnt/c/Users/nmogi/Desktop/spo3/spo3/CMakeFiles/edit_cache.dir
+/mnt/c/Users/nmogi/Desktop/spo3/spo3/CMakeFiles/rebuild_cache.dir

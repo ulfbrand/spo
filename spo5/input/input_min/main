@@ -1,0 +1,7 @@
+type Child : UnknownType {
+    byte y;
+}
+
+main() {
+    Child obj;
+}

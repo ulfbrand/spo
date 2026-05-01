@@ -1,0 +1,120 @@
+digraph AST {
+graph [splines=true];
+n0[label="SOURCE"]
+n0 -> n1;
+n1[label="FUNC_DEF"]
+n1 -> n2;
+n2[label="FUNC_SIG"]
+n2 -> n3;
+n3[label="TYPE"]
+n3 -> n4;
+n4[label="int"]
+n2 -> n5;
+n5[label="expr"]
+n2 -> n6;
+n6[label="ARG_DEF"]
+n1 -> n7;
+n7[label="ROOT_DEF"]
+n7 -> n8;
+n8[label="BLOCK_DEF"]
+n8 -> n9;
+n9[label="EXPRESSION"]
+n9 -> n10;
+n10[label="&"]
+n10 -> n11;
+n11[label="NAME"]
+n11 -> n12;
+n12[label="a"]
+n10 -> n13;
+n13[label="NAME"]
+n13 -> n14;
+n14[label="b"]
+n8 -> n15;
+n15[label="EXPRESSION"]
+n15 -> n16;
+n16[label="<="]
+n16 -> n17;
+n17[label=">="]
+n17 -> n18;
+n18[label="NAME"]
+n18 -> n19;
+n19[label="a"]
+n17 -> n20;
+n20[label="NAME"]
+n20 -> n21;
+n21[label="b"]
+n16 -> n22;
+n22[label="NAME"]
+n22 -> n23;
+n23[label="c"]
+n8 -> n24;
+n24[label="VAR_DEF"]
+n24 -> n25;
+n25[label="TYPE"]
+n25 -> n26;
+n26[label="not"]
+n24 -> n27;
+n27[label="DECLARE"]
+n27 -> n28;
+n28[label="a"]
+n8 -> n29;
+n29[label="EXPRESSION"]
+n29 -> n30;
+n30[label="EXPRESSION"]
+n30 -> n31;
+n31[label="\"literal in braces\""]
+n8 -> n32;
+n32[label="EXPRESSION"]
+n32 -> n33;
+n33[label="ACCESS"]
+n33 -> n34;
+n34[label="NAME"]
+n34 -> n35;
+n35[label="call"]
+n33 -> n36;
+n36[label="ARG_CALL"]
+n36 -> n37;
+n37[label="EXPRESSION"]
+n37 -> n38;
+n38[label="NAME"]
+n38 -> n39;
+n39[label="item1"]
+n36 -> n40;
+n40[label="EXPRESSION"]
+n40 -> n41;
+n41[label="NAME"]
+n41 -> n42;
+n42[label="item2"]
+n8 -> n43;
+n43[label="EXPRESSION"]
+n43 -> n44;
+n44[label="ACCESS"]
+n44 -> n45;
+n45[label="NAME"]
+n45 -> n46;
+n46[label="indexer"]
+n44 -> n47;
+n47[label="INDEXER_DEF"]
+n47 -> n48;
+n48[label="EXPRESSION"]
+n48 -> n49;
+n49[label="0"]
+n47 -> n50;
+n50[label="EXPRESSION"]
+n50 -> n51;
+n51[label="1"]
+n47 -> n52;
+n52[label="EXPRESSION"]
+n52 -> n53;
+n53[label="2"]
+n47 -> n54;
+n54[label="EXPRESSION"]
+n54 -> n55;
+n55[label="3"]
+n8 -> n56;
+n56[label="EXPRESSION"]
+n56 -> n57;
+n57[label="NAME"]
+n57 -> n58;
+n58[label="a"]
+}

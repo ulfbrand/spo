@@ -1,0 +1,134 @@
+digraph CFG {
+graph [splines=true];
+n_28[label="START"]
+n_28 -> n_30;
+n_30[label="EXPRESSION"]
+subgraph cluster_30 {
+n_30 -> ot_0[label=ot];
+ot_0[label="call"]
+ot_0 -> ot_1[label=child0,color=orange];
+ot_1[label="put_char"]
+ot_0 -> ot_2[label=child1,color=orange];
+ot_2[label="load_const"]
+ot_2 -> ot_3[label=child0,color=orange];
+ot_3[label="':'"]
+}
+n_30 -> n_31;
+n_31[label="EXPRESSION"]
+subgraph cluster_31 {
+n_31 -> ot_4[label=ot];
+ot_4[label="store"]
+ot_4 -> ot_5[label=child0,color=orange];
+ot_5[label="a"]
+ot_4 -> ot_6[label=child1,color=orange];
+ot_6[label="call"]
+ot_6 -> ot_7[label=child0,color=orange];
+ot_7[label="get_int"]
+}
+n_31 -> n_32;
+n_32[label="EXPRESSION"]
+subgraph cluster_32 {
+n_32 -> ot_8[label=ot];
+ot_8[label="call"]
+ot_8 -> ot_9[label=child0,color=orange];
+ot_9[label="put_char"]
+ot_8 -> ot_10[label=child1,color=orange];
+ot_10[label="load_const"]
+ot_10 -> ot_11[label=child0,color=orange];
+ot_11[label="9"]
+}
+n_32 -> n_33;
+n_33[label="EXPRESSION"]
+subgraph cluster_33 {
+n_33 -> ot_12[label=ot];
+ot_12[label="call"]
+ot_12 -> ot_13[label=child0,color=orange];
+ot_13[label="put_int"]
+ot_12 -> ot_14[label=child1,color=orange];
+ot_14[label="load_data"]
+ot_14 -> ot_15[label=child0,color=orange];
+ot_15[label="a"]
+}
+n_33 -> n_34;
+n_34[label="EXPRESSION"]
+subgraph cluster_34 {
+n_34 -> ot_16[label=ot];
+ot_16[label="call"]
+ot_16 -> ot_17[label=child0,color=orange];
+ot_17[label="put_char"]
+ot_16 -> ot_18[label=child1,color=orange];
+ot_18[label="load_const"]
+ot_18 -> ot_19[label=child0,color=orange];
+ot_19[label="10"]
+}
+n_34 -> n_35;
+n_35[label="EXPRESSION"]
+subgraph cluster_35 {
+n_35 -> ot_20[label=ot];
+ot_20[label="store"]
+ot_20 -> ot_21[label=child0,color=orange];
+ot_21[label="b"]
+ot_20 -> ot_22[label=child1,color=orange];
+ot_22[label="call"]
+ot_22 -> ot_23[label=child0,color=orange];
+ot_23[label="get_int"]
+}
+n_35 -> n_36;
+n_36[label="EXPRESSION"]
+subgraph cluster_36 {
+n_36 -> ot_24[label=ot];
+ot_24[label="call"]
+ot_24 -> ot_25[label=child0,color=orange];
+ot_25[label="put_int"]
+ot_24 -> ot_26[label=child1,color=orange];
+ot_26[label="load_data"]
+ot_26 -> ot_27[label=child0,color=orange];
+ot_27[label="b"]
+}
+n_36 -> n_37;
+n_37[label="EXPRESSION"]
+subgraph cluster_37 {
+n_37 -> ot_28[label=ot];
+ot_28[label="call"]
+ot_28 -> ot_29[label=child0,color=orange];
+ot_29[label="put_char"]
+ot_28 -> ot_30[label=child1,color=orange];
+ot_30[label="load_const"]
+ot_30 -> ot_31[label=child0,color=orange];
+ot_31[label="10"]
+}
+n_37 -> n_38;
+n_38[label="EXPRESSION"]
+subgraph cluster_38 {
+n_38 -> ot_32[label=ot];
+ot_32[label="store"]
+ot_32 -> ot_33[label=child0,color=orange];
+ot_33[label="a"]
+ot_32 -> ot_34[label=child1,color=orange];
+ot_34[label="+"]
+ot_34 -> ot_35[label=child0,color=orange];
+ot_35[label="load_data"]
+ot_35 -> ot_36[label=child0,color=orange];
+ot_36[label="a"]
+ot_34 -> ot_37[label=child1,color=orange];
+ot_37[label="load_data"]
+ot_37 -> ot_38[label=child0,color=orange];
+ot_38[label="b"]
+}
+n_38 -> n_39;
+n_39[label="EXPRESSION"]
+subgraph cluster_39 {
+n_39 -> ot_39[label=ot];
+ot_39[label="call"]
+ot_39 -> ot_40[label=child0,color=orange];
+ot_40[label="put_int"]
+ot_39 -> ot_41[label=child1,color=orange];
+ot_41[label="load_data"]
+ot_41 -> ot_42[label=child0,color=orange];
+ot_42[label="a"]
+}
+n_39 -> n_40;
+n_40[label="BLOCK_END"]
+n_40 -> n_29;
+n_29[label="END"]
+}

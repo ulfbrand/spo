@@ -1,0 +1,11 @@
+type Base {
+    byte x;
+}
+
+type Child : Base {
+    byte y;
+}
+
+main() {
+    Child obj;
+}
